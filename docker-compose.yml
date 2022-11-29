@@ -1,6 +1,21 @@
 version: "3"
 
 services:
+  go:
+    container_name: koukaten2022_GO
+    build:
+      context: ./docker/go
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
+    env_file:
+      - ./Docker/go/.env
+    volumes:
+      - ./go:/go/src/app # マウントディレクトリ
+    ports:
+      - 8080:8080
+    depends_on:
+      - "neo4j"
   neo4j:
     image: neo4j
     restart: always
