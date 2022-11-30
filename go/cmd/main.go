@@ -37,6 +37,6 @@ func helloWorld(uri, username, password string) (string, error) {
 }
 
 func main() {
-	trunsctionResult, err := helloWorld("neo4j://localhost:7687", "neo4j", "r3uyP84Mx8eevrZ")
+	trunsctionResult, err := helloWorld("bolt://neo4j:57687", "neo4j", "r3uyP84Mx8eevrZ")
 	fmt.Println(trunsctionResult, err)
 }

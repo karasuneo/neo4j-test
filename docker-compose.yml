@@ -8,8 +8,8 @@ services:
       dockerfile: Dockerfile
     stdin_open: true
     tty: true
-    env_file:
-      - ./Docker/go/.env
+    # env_file:
+    #   - ./Docker/go/.env
     volumes:
       - ./go:/go/src/app # マウントディレクトリ
     ports:

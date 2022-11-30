@@ -1,4 +1,4 @@
-module neo4j-test
+module go
 
 go 1.19
 
